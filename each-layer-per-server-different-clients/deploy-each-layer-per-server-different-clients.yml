@@ -1,0 +1,13 @@
+---
+- name: Deploy ethereum stack - each layer on a separate server, different clients
+  hosts: ethereum_servers
+  become: true
+
+
+  vars:
+    suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
+    graffiti: SlingNode.com
+
+
+  roles:
+    - role: slingnode.ethereum

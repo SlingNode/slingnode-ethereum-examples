@@ -1,0 +1,14 @@
+---
+- name: Deploy ethereum - execution and consensus only - default clients (geth & lighthouse)
+  hosts: ethereum_servers
+  become: true
+
+
+  vars:
+    deploy_execution: true
+    deploy_consensus: true
+    deploy_validator: false
+
+
+  roles:
+    - role: slingnode.ethereum

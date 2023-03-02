@@ -1,0 +1,19 @@
+---
+- name: Deploy ehtereum stack - each layer on a separate server, same client mix on each server
+  hosts: ethereum_servers
+  become: true
+
+
+  vars:
+    clients:
+      execution: nethermind
+      consensus: prysm
+      validator: prysm
+
+    suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
+    graffiti: SlingNode.com
+    jwt_secret_string: "7a813d06b0a08de1f1e70ebbc6b3ec8dc589f62d04d346b4754c9d739b4c648b"
+
+
+  roles:
+    - role: slingnode.ethereum

@@ -1,0 +1,18 @@
+---
+- name: Deploy ethereum - execution and consensus only 
+  hosts: ethereum_servers
+  become: true
+
+
+  vars:
+    clients:
+      execution: nethermind
+      consensus: prysm
+    
+    deploy_execution: true
+    deploy_consensus: true
+    deploy_validator: false
+
+
+  roles:
+    - role: slingnode.ethereum

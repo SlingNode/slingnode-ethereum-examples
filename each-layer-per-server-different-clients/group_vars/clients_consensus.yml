@@ -1,0 +1,11 @@
+deploy_execution: false
+deploy_consensus: true
+deploy_validator: false
+
+execution_endpoint_authenticated: http://{{ hostvars['slingnode-test-01']['ansible_facts']['default_ipv4']['address'] }}:{{ el_authrpc_port }}
+
+prysm_checkpoint_sync_url: https://sync-goerli.beaconcha.in
+
+expose_cl_http_port_to_host: true
+host_ip_address_to_bind_to: 0.0.0.0
+

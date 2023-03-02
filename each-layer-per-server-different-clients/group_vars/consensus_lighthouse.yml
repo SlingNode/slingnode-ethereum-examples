@@ -1,0 +1,4 @@
+clients:
+  consensus: lighthouse
+
+beacon_node: "http://{{ hostvars['slingnode-test-02']['ansible_facts']['default_ipv4']['address'] }}:{{ cl_http_port }}"

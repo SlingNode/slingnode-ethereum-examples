@@ -1,0 +1,4 @@
+clients:
+  consensus: prysm
+
+expose_prysm_rpc_port_to_host: true

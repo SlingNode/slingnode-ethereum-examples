@@ -1,0 +1,7 @@
+deploy_execution: true
+deploy_consensus: false
+deploy_validator: false
+
+expose_el_authrpc_port_to_host: true
+host_ip_address_to_bind_to: 0.0.0.0
+
