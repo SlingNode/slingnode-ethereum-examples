@@ -1,0 +1,5 @@
+clients:
+  validator: prysm
+
+prysm_beacon_rpc_provider: "{{ hostvars[consensus_client_node]['ansible_facts']['default_ipv4']['address'] }}:{{ prysm_rpc_port }}"
+prysm_beacon_rpc_gateway_provider: "{{ hostvars[consensus_client_node]['ansible_facts']['default_ipv4']['address'] }}:{{ cl_http_port }}"

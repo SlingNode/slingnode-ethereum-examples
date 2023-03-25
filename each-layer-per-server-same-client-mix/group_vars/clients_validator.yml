@@ -1,8 +1,0 @@
-deploy_execution: false
-deploy_consensus: false
-deploy_validator: true
-
-beacon_node: http://{{ hostvars[groups['clients_consensus'][groups['clients_validator'].index(inventory_hostname)]]['ansible_eth0']['ipv4']['address'] }}:{{ cl_http_port }}
-
-prysm_beacon_rpc_provider: "{{ hostvars[groups['clients_consensus'][groups['clients_validator'].index(inventory_hostname)]]['ansible_eth0']['ipv4']['address'] }}:{{ prysm_rpc_port }}"
-prysm_beacon_rpc_gateway_provider: "{{ hostvars[groups['clients_consensus'][groups['clients_validator'].index(inventory_hostname)]]['ansible_eth0']['ipv4']['address'] }}:{{ cl_http_port }}"

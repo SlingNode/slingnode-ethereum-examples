@@ -12,7 +12,14 @@
     deploy_execution: true
     deploy_consensus: true
     deploy_validator: false
+    
+    suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
 
 
   roles:
+    - role: geerlingguy.docker
+      vars:
+        docker_package_state: present
+        docker_install_compose_plugin: true
+        
     - role: slingnode.ethereum

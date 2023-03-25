@@ -32,7 +32,7 @@ The inventory would be:
 To execute the playbook and deploy the node using the default client (Geth & Lighthouse)
 
 ```shell
-cd slingnode-ethereum-examples
+cd slingnode-ethereum-examples/slingnode.ethereum
 ansible-galaxy install -r requirements.yml
 cd execution-and-consensus-only
 ansible-playbook deploy-execution-and-consensus-only-default-clients.yml -i inventory.ini --private-key ~/.ssh/ubuntu.privatekey  --user ubuntu

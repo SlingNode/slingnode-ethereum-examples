@@ -10,4 +10,9 @@
 
 
   roles:
+    - role: geerlingguy.docker
+      vars:
+        docker_package_state: present
+        docker_install_compose_plugin: true
+        
     - role: slingnode.ethereum
