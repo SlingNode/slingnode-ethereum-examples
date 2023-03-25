@@ -1,15 +1,12 @@
 ---
-- name: Deploy ethereum stack - whole stack per node
+- name: Deploy ethereum stack - each layer on a separate server, different clients
   hosts: ethereum_servers
   become: true
 
 
   vars:
-    clients:
-      execution: nethermind
-      consensus: prysm
-      validator: prysm
-
+    
+    jwt_secret_string: "7a813d06b0a08de1f1e70ebbc6b3ec8dc589f62d04d346b4754c9d739b4c648b"
     suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
     graffiti: SlingNode.com
 
