@@ -6,9 +6,9 @@ validator_to_consensus_mapping: "{{ dict(groups.clients_validator | zip(groups.c
 
 consensus_client_node: "{{ validator_to_consensus_mapping[inventory_hostname] }}"
 
-beacon_node: "http://{{ hostvars[consensus_client_node]['ansible_facts']['default_ipv4']['address'] }}:{{ cl_http_port }}"
+beacon_node: "http://{{ hostvars[consensus_client_node]['ansible_default_ipv4']['address'] }}:{{ consensus_client_http_port }}"
 
-prysm_beacon_rpc_provider: "{{ hostvars[consensus_client_node]['ansible_facts']['default_ipv4']['address'] }}:{{ prysm_rpc_port }}"
-prysm_beacon_rpc_gateway_provider: "{{ hostvars[consensus_client_node]['ansible_facts']['default_ipv4']['address'] }}:{{ cl_http_port }}"
+prysm_beacon_rpc_provider: "{{ hostvars[consensus_client_node]['ansible_default_ipv4']['address'] }}:{{ prysm_rpc_port }}"
+prysm_beacon_rpc_gateway_provider: "{{ hostvars[consensus_client_node]['ansible_default_ipv4']['address'] }}:{{ consensus_client_http_port }}"
 
 expose_validator_client_metrics_port_to_host: true
