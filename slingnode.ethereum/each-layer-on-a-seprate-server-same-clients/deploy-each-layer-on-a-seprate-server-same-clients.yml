@@ -14,11 +14,18 @@
     graffiti: SlingNode.com
     jwt_secret_string: "7a813d06b0a08de1f1e70ebbc6b3ec8dc589f62d04d346b4754c9d739b4c648b"
 
-    # By default ports exposed to host (i.e. expose_cl_http_port_to_host) are bound to 127.0.0.1. This means that in order to access them
+    # By default ports exposed to host (i.e. expose_consensus_client_http_port_to_host) are bound to 127.0.0.1. This means that in order to access them
     # from other hosts a reverse proxu or SSH tunnles must be used. If you want to access the ports without the need for reverse proxy
     # set this variable to 0.0.0.0.
     host_ip_address_to_bind_to: 0.0.0.0
 
+    enable_firewall: false
+
 
   roles:
+    - role: geerlingguy.docker
+      vars:
+        docker_package_state: present
+        docker_install_compose_plugin: true
+        
     - role: slingnode.ethereum

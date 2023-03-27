@@ -1,12 +1,18 @@
-# ethereum-examples
-Example playbooks for SlingNode's Ethereum Ansible roles.
+# slingnod-ethereum-examples
+Example playbooks for SlingNode's Ethereum Ansible roles. 
 
-This repo contians sample inventories, group vars and playbooks that cover common usage scenarios for slingnode.ethereum role.
-The examples are meant to showcase ways of structuring inventories and group vars to accomplish various deployment scenarios from deploying
-a whole stack (execution, consensus, validator) on a single server all the way up to deploying hundreds of servers in a multi tier architecture.
+This repo contians sample inventories, group vars and playbooks that cover common usage scenarios for SlingNode roles.
+The examples are meant to showcase ways of structuring inventories and group vars to accomplish various deployment scenarios from deploying a whole stack (execution, consensus, validator) on a single server all the way up to deploying hundreds of servers in a multi tier architecture and full observability stack. 
 
-Each directory in this project corresponds to a deployment scenario. For full documentation of the role and descriptions of each scenario
-vist OURDOCSGITBOOKSITE.
+Each directory corresponds to a role. 
+
+## slingnode.ethereum
+
+View the role on Ansible-Galaxy: https://galaxy.ansible.com/slingnode/ethereum
+
+Review the source code and contribute on GitHub: https://github.com/SlingNode/slingnode-ansible-ethereum
+
+Each sub-directory corresponds to a deployment scenario. For full documentation of the role and description of each scenario vist https://docs.slingnode.com/slingnode.ethereum/using-the-role.
 
 We recommend that you review the documentation first however if you just want to get going and deploy your first node follow the steps below.
 
