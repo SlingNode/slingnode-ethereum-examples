@@ -1,0 +1,16 @@
+---
+- name: Import validator keys using API 
+  hosts: ethereum_servers
+  become: true
+
+  # Not supported for Prysm - it requires a Wallet to be created first. 
+
+  vars:
+    clients:
+      validator: lighthouse
+
+    import_validator_keys_api: true
+
+
+  roles:        
+    - role: slingnode.ethereum_node_mgmt
