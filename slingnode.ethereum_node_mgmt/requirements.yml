@@ -1,0 +1,8 @@
+---
+roles:
+  - name: slingnode.ethereum_node_mgmt
+
+
+collections:
+  - name: community.docker
+    version: 3.4.0

@@ -1,0 +1,15 @@
+---
+- name: Import validator keys using command line 
+  hosts: ethereum_servers
+  become: true
+
+
+  vars:
+    clients:
+      validator: lighthouse
+
+    export_slashing_protection_db: true
+
+
+  roles:        
+    - role: slingnode.ethereum_node_mgmt

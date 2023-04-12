@@ -1,0 +1,22 @@
+---
+# Import validator keys using command line
+keystore_password_file: keystore-m_12381_3600_0_0_0-1669980799.txt
+keystore_files:
+  - src: test_validator_keystores/keystore-m_12381_3600_0_0_0-1669980799.json
+    dest: "{{ blockchain_root_path }}/validator/keystore/keystore-m_12381_3600_0_0_0-1669980799.json"
+  - src: test_validator_keystores/keystore-m_12381_3600_0_0_0-1669980799.txt
+    dest: "{{ blockchain_root_path }}/validator/keystore/keystore-m_12381_3600_0_0_0-1669980799.txt"
+
+
+# Import validator keys using API vars
+keystores_without_slashing_protection:
+  - keystore: test_validator_keystores/keystore-m_12381_3600_1_0_0-1680087924.json
+    password: test_validator_keystores/keystore-m_12381_3600_1_0_0-1680087924.txt
+  - keystore: test_validator_keystores/keystore-m_12381_3600_2_0_0-1680087924.json
+    password: test_validator_keystores/keystore-m_12381_3600_2_0_0-1680087924.txt
+
+
+# Import slashing protection DB vars
+copy_slashing_protection_db_to_server: true
+source_slashing_protection_db_to_copy: test_validator_keystores/slashing_protection_db.json
+

@@ -8,7 +8,7 @@
     clients:
       execution: nethermind
       consensus: prysm
-      validator: prysm[]
+      validator: prysm
 
     suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
     graffiti: SlingNode.com

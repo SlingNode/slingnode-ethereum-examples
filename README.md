@@ -1,4 +1,4 @@
-# slingnod-ethereum-examples
+# slingnode-ethereum-examples
 Example playbooks for SlingNode's Ethereum Ansible roles. 
 
 This repo contians sample inventories, group vars and playbooks that cover common usage scenarios for SlingNode roles.
@@ -43,3 +43,13 @@ ansible-galaxy install -r requirements.yml
 cd execution-and-consensus-only
 ansible-playbook deploy-execution-and-consensus-only-default-clients.yml -i inventory.ini --private-key ~/.ssh/ubuntu.privatekey  --user ubuntu
 ```
+
+## slingnode.ethereum_node_mgmt
+
+slingnode.ethereum_node_mgmt is designed to manage nodes deployed using slingnode.ethereum role. Having said that, most settings are templated out and factored out into variables. Therefore, it should be possible to adapt it and use it with any Ethereum node. 
+
+View the role on Ansible-Galaxy: https://galaxy.ansible.com/slingnode/ethereum_node_mgmt
+
+Review the source code and contribute on GitHub: https://github.com/SlingNode/slingnode-ansible-ethereum-node-mgmt
+
+For full documentation of the role and description of example playbooks vist https://docs.slingnode.com/slingnode.ethereum_node_mgmt/using-the-role.
