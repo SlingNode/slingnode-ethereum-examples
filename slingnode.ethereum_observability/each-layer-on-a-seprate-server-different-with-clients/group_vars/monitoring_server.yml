@@ -1,0 +1,7 @@
+deploy_execution: false
+deploy_consensus: false
+deploy_validator: false
+
+monitoring_server: true
+install_monitoring_agents: false
+host_ip_address_to_bind_to: 0.0.0.0

@@ -1,0 +1,2 @@
+monitoring_server_host: "{{ hostvars[groups['monitoring_server'][0]]['ansible_facts']['default_ipv4']['address'] }}"
+single_server_deployment: false
