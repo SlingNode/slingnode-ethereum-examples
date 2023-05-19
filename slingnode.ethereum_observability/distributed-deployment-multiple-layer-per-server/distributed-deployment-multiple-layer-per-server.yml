@@ -1,13 +1,15 @@
 ---
-- name: Deploy observability stack on a single node with clients on the same node
-  hosts: ethereum_servers
+- name: Deploy observability role andethereum stack with observability agents
+  hosts: all
   become: true
 
+
   vars:
+    
+    jwt_secret_string: "7a813d06b0a08de1f1e70ebbc6b3ec8dc589f62d04d346b4754c9d739b4c648b"
     suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
     graffiti: SlingNode.com
-    validator_api_enabled: true
-    expose_validator_api_port_to_host: true
+    enable_firewall: false
 
 
   roles:
@@ -17,5 +19,6 @@
         docker_install_compose_plugin: true
         
     - role: slingnode.ethereum
+      when: not monitoring_server | bool
 
     - role: slingnode.ethereum_observability

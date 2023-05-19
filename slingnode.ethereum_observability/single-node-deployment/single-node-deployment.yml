@@ -1,0 +1,21 @@
+---
+- name: Deploy observability stack on a single node including all the clients
+  hosts: ethereum_servers
+  become: true
+
+  vars:
+    suggested_fee_recipient: "0xa10214731A6D9eC03d36d1437796D1cEe6a061f7"
+    graffiti: SlingNode.com
+    validator_api_enabled: true
+    expose_validator_api_port_to_host: true
+
+
+  roles:
+    - role: geerlingguy.docker
+      vars:
+        docker_package_state: present
+        docker_install_compose_plugin: true
+        
+    - role: slingnode.ethereum
+
+    - role: slingnode.ethereum_observability

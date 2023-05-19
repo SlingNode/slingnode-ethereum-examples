@@ -1,0 +1,3 @@
+monitoring_server: false
+install_monitoring_agents: true
+host_ip_address_to_bind_to: 0.0.0.0

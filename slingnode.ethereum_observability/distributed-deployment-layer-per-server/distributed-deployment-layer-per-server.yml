@@ -1,5 +1,5 @@
 ---
-- name: Deploy ethereum stack with observability agents - each layer on a separate server, different clients
+- name: Deploy ethereum stack with observability agents - each layer on a separate server
   hosts: all
   become: true
 
@@ -19,17 +19,6 @@
         docker_install_compose_plugin: true
         
     - role: slingnode.ethereum
+      when: not monitoring_server | bool
 
     - role: slingnode.ethereum_observability
-
-# - name: Deploy observability center on a dedicated node
-#   hosts: monitoring_server
-#   become: true
-
-#   roles:
-#     - role: geerlingguy.docker
-#       vars:
-#         docker_package_state: present
-#         docker_install_compose_plugin: true
-
-#     - role: slingnode.ethereum_observability
