@@ -53,3 +53,16 @@ View the role on Ansible-Galaxy: https://galaxy.ansible.com/slingnode/ethereum_n
 Review the source code and contribute on GitHub: https://github.com/SlingNode/slingnode-ansible-ethereum-node-mgmt
 
 For full documentation of the role and description of example playbooks vist https://docs.slingnode.com/slingnode.ethereum_node_mgmt/using-the-role.
+
+
+## slingnode.ethereum_observability 
+
+slingnode.ethereum_observability is an Ansible role used to deploy a full observability stack that seamlessly integrates with Ethereum nodes deployed by slingnode.ethereum role. 
+
+Both roles use the same naming for common variables. This means you can define them once in your Playbook, group_vars or host_vars and deploy a full Ethereum node along with the observability stack. 
+
+View the role on Ansible-Galaxy: https://galaxy.ansible.com/slingnode/ethereum_observability
+
+Review the source code and contribute on GitHub: https://github.com/SlingNode/slingnode-ansible-ethereum-observability
+
+For full documentation of the role and description of example playbooks vist https://docs.slingnode.com/slingnode.ethereum_observability/using-the-role.
